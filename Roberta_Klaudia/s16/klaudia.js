@@ -20,6 +20,8 @@
  * const - variabila statica (NU i se schimba valoarea)
  */
 
+
+
 /**
  * Numbers (variabile)
  */
@@ -44,6 +46,8 @@ total = aNumber * biNumber;
 total = aNumber / biNumber;
 total = aNumber % biNumber;
 console.log(total);
+
+
 
 /**
  * String (insiruire de caractere)
@@ -73,5 +77,74 @@ folosind backticks
 am scris pe mai multe randuri ${fullName}`;
 console.log(anotherInfo);
 
-console.log('My fuulName is'   + fullName);
-console.log('My fullName is'   ${fullName});
+console.log('My fuulName is'   + fullName); //NU se va lua in considerare spatiul
+console.log('My fullName is'   ${fullName}); //se va tine cont de spatiu
+
+
+
+/**
+ * Boolean
+ */
+
+let lightsOn = false;
+lightsOn = true;
+
+/**
+ * Undefined type
+ */
+
+let dogName;
+let catName = 'Mitzy';
+let dogAge = 5;
+console.log(dogName + catName);
+console.log(dogAge + catName);
+dogName = 'Bubico';
+
+
+
+/**
+ * Object = { key: value }
+ */
+
+const person = {
+   fullName: 'Roberta-Claudia Anton',
+   age: 21,
+   lovesCold: false,
+   address: {
+    city: 'Focsani',
+    zipcode: 620117
+   },
+   'residence-permit': true
+};
+console.log(person);
+console.log(person.fullName);
+console.log(person.address);
+console.log(person.address.zipcode);
+console.log(person[age]); // Nu va functiona fara '' sau "" intre []
+console.log(person['age']);
+console.log(person["residence-permit"]);
+
+
+const nat = "nationality";
+const nationality = 'American';
+console.log(person[nat]);
+
+
+/**
+ * Array (lista ---> numaratoarea incepe de la 0 !!! )
+ */
+
+const daysOfWeek = ['Monday', 'Tuesday', 5];
+console.log(daysOfWeek);
+console.log(daysOfWeek.length); // length = nr de values din array
+console.log(daysOfWeek[1]); // 1 = key din array (vazut in consola) si are ca value pe 'Tuesday'
+console.log(daysOfWeek[daysOfWeek.length]);
+
+
+// Toate cele 3 expresii de mai jos inseamna acelasi lucru
+
+const i = daysOfWeek.length;
+const index = daysOfWeek.length;
+console.log(daysOfWeek[i - 1]);
+console.log(daysOfWeek[index - 1]);
+console.log(daysOfWeek[daysOfWeek.length - 1]);
