@@ -77,3 +77,63 @@ console.log(anotherInfo);
 console.log(fullName);
 console.log('My fullName is'               + fullName);
 console.log(`My fullName is     ${fullName}`);
+
+/**
+ * Boolean 
+ */
+
+let lightsOn = false;
+lightsOn = true;
+
+/**
+ * Undefined type
+ */
+
+let dogName;
+let catName = 'Mitzy';
+let dogAge = 5;
+console.log(dogName + catName);
+console.log(dogName + dogAge);
+dogName = 'Bubico';
+
+/**
+ * Objects
+ */
+
+const person = {
+    fullName: 'Sergiu Savin',
+    age: 30,
+    lovesCold: false,
+    nationality: 'Romanian',
+    address: {
+        city: 'Brasov',
+        zipcode: 500500
+    },
+    'residence-permit': true
+};
+console.log(person);
+console.log(person.fullName);
+console.log(person.address.zipcode);
+console.log(person["residence-permit"]);
+
+const nat = "nationality";
+const nationality = 'American'
+console.log(person[nat]);
+
+/**
+ * Array
+ */
+
+const daysOfWeek = ['Monday', 'Tuesday', 'Wendsday', 4];
+console.log(daysOfWeek);
+console.log(daysOfWeek.length);
+console.log(daysOfWeek[1]);
+
+// Toate cele 3 expresii de mai jos inseamna acelasi lucru
+
+const i = daysOfWeek.length;
+const index = daysOfWeek.length;
+console.log(daysOfWeek[i - 1]); 
+console.log(daysOfWeek[index - 1]);
+console.log(daysOfWeek[daysOfWeek.length - 1]);
+console.log(daysOfWeek[2]);
