@@ -53,10 +53,10 @@ const zipcode = `Nume: ${fullName}`;
 console.log(zipcode);
 const age = 30;
 
-const personalInfo = 
-'Salut' +
-fullName + "cu varsta de " + age + " de ani" +
-'Bine ai venit la curs!' ;
+const personalInfo =
+    'Salut' +
+    fullName + "cu varsta de " + age + " de ani" +
+    'Bine ai venit la curs!';
 console.log(personalInfo);
 
 const anotherInfo = `
@@ -65,3 +65,50 @@ un comment simplu
 folosind backticks
 am scris pe mai multe randuri ${fullName}`;
 console.log(anotherInfo);
+
+/**
+ * Boolean
+ */
+
+let lightsOn = false;
+lightsOn = true;
+console.log(lightsOn);
+
+/**
+ * Undefined type
+ */
+
+let dogName;
+console.log(dogName);
+
+/**
+ * Objects
+ */
+
+const person = {
+    fullName: 'Adrian Pop',
+    age: 30,
+    lovesCold: false,
+    nationality: 'Romanian',
+    address: {
+        city: 'Timisoara',
+        zipcode: 500500
+    },
+    'residence-permit': true
+};
+console.log(person);
+console.log(person.fullName);
+console.log(person.address.city);
+console.log(person['nationality']);
+console.log(person["residence-permit"]);
+
+/**
+ * Array - liste - 
+ *       - subtipuri de obiecte 
+ *       - de tip referinta
+ */
+
+const daysOfWeek = ['Monday','Tuesday','Wednesday',4];
+console.log(daysOfWeek);
+console.log(daysOfWeek[1]);
+console.log(daysOfWeek[daysOfWeek.length-1]);
