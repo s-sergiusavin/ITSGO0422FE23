@@ -36,3 +36,48 @@ folosind backticks
 pe mai multe randuri, ${fullName}`;
 console.log(anotherInfo);
 console.log(fullName);
+
+/**
+ *
+ *
+ *                                 Booleans
+ */
+
+let lightsOn = true;
+lightsOn = false;
+
+/**
+ *
+ *                                   Undefined
+ *
+ */
+
+let dogName;
+console.log(dogName);
+
+/**
+ *
+ *                      Object
+ *
+ *
+ */
+
+const person = {
+  fullName: "Calin Cretiu",
+  age: 41,
+  lovesCold: false,
+  nationality: "Romanian",
+  address: {
+    city: "Timisoara",
+    zipcode: 300350,
+  },
+  "residence-permit": true,
+};
+
+console.log(person);
+console.log("Full name: ", person.fullName);
+console.log("Address: ", person.address);
+console.log("City: ", person.address.city);
+console.log(person.nationality);
+console.log(person["nationality"]);
+console.log(person["residence-permit"]);
