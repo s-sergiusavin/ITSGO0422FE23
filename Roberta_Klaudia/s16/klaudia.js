@@ -78,7 +78,7 @@ am scris pe mai multe randuri ${fullName}`;
 console.log(anotherInfo);
 
 console.log('My fuulName is'   + fullName); //NU se va lua in considerare spatiul
-console.log('My fullName is'   ${fullName}); //se va tine cont de spatiu
+console.log(`My fullName is   ${fullName}`); //se va tine cont de spatiu
 
 
 
