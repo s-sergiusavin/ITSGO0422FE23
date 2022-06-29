@@ -66,3 +66,41 @@ Acesta este un coment
  simplu folosind backticks
 am scris pe mai multe randuri ${fullName}`;
 console.log(anotherInfo);
+/**
+ * Boolean
+ */
+
+let ligthsOn = false;
+ligthsOn = true;
+
+/**
+ * Undefined type
+ */
+let dogName;
+console.log(dogName);
+
+/**
+ * Objects
+ */
+
+const person = {
+  fullName: "Petrea Cosmin",
+  age: 30,
+  lovesCold: false,
+  nationality: "Romanian",
+  address: {
+    city: "Iasi",
+    zipcode: "70057",
+  },
+  "residence-permit": true,
+};
+console.log(person);
+console.log(person.address.zipcode);
+console.log(person["residence-permit"]);
+
+/**
+ * Array
+ */
+
+const daysOfWeek = ["Monday", "Tuesday", "Wednesday", 4];
+console.log(daysOfWeek.length);
