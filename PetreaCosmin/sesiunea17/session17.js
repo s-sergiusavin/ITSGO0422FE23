@@ -149,3 +149,26 @@ function orderApizza(ingredient1, ingredient2, ingredient3) {
 
 orderApizza("Salam", "Mozzarela", "ananas");
 orderApizza("pastrama", "telemea", "ardei");
+
+function makeTheSum(number1, number2) {
+  return number1 + number2;
+  console.log("Suma este:", number1 + number2);
+}
+// makeTheSum(5, 2);
+
+letSumresult = makeTheSum(5, 2);
+console.log(letSumresult);
+
+let pizzaOrdered = 0;
+
+function doAnotherPizza(i1, i2, i3) {
+  console.log(`vreau o pizza cu ${i1} , ${i2} , ${i3}`);
+  pizzaOrdered += 1;
+  return "Pizza a fost comandata";
+}
+let anounce = doAnotherPizza("Salam", "Mozzarela", "ananas");
+anounce = doAnotherPizza("Salam", "Mozzarela", "ananas");
+anounce = doAnotherPizza("Salam", "Mozzarela", "ananas");
+anounce = doAnotherPizza("Salam", "Mozzarela", "ananas");
+console.log(anounce);
+console.log(pizzaOrdered);
