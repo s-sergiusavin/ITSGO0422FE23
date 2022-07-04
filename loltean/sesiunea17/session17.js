@@ -177,16 +177,16 @@ function doSum(a,b) {
 
 //doSum(5,7);
 
-let sumResult = doSum(5,7);
+let sumResult = doSum(5, 7);
 console.log(sumResult);
-let pizzaOrder = 0;
+let pizzaOrdered = 0;
 function doAnotherPizza(i1, i2, i3) {
-    console.log(`Pizza cu ` + i1 + i2 + ' ' + i3 + ' in preparare');
-    pizzaOrder +=1;
-    return pizzaOrder;
+    console.log('Pizza cu ' + i1 + i2 + ' ' +i3 + ' in preparare');
+    pizzaOrdered += 1;
+    return pizzaOrdered;
 }
 
-let anounce = doAnotherPizza("pastrama", 'ciuperci', 'ardei');
-const anounce = doAnotherPizza("pastrama", 'ciuperci', 'ardei');
-const anounce = doAnotherPizza("pastrama", 'ciuperci', 'ardei');
+let anounce = doAnotherPizza("ciuperci", "ardei", "prosciutto");
+anounce = doAnotherPizza("ciuperci", "ardei", "prosciutto");
+anounce = doAnotherPizza("ciuperci", "ardei", "prosciutto");
 console.log(anounce);
