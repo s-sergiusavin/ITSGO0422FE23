@@ -12,9 +12,9 @@ if (true) {
   const testConst = "7const";
   var constVar = "7var";
 
-  //   console.log(test);
+  // console.log(test);
   //   console.log(testConst);
-  //   console.log(constVar);
+  // console.log(constVar);
 
   if (true) {
     let test = "9let";
@@ -40,10 +40,10 @@ function addTwo(number) {
   console.log(globalVar);
   return number + 2;
 }
-// console.log(globalVar);
+//  console.log(globalVar);
 
-// const newNumber = addTwo(3);
-// console.log(globalVar);
+const newNumber = addTwo(3);
+//  console.log(globalVar);
 // console.log(cannotSeeMe);
 
 // let needMoney = true;
@@ -171,3 +171,16 @@ if (valoareMoneda[Math.round(Math.random())] == "cap") {
 } else {
   console.log("A iesit PAJURA");
 }
+
+const makeAfunction = (m) => {
+  console.log("salut eu  sunt petrea");
+  return m + 5;
+};
+
+const makeAfunctionResult = makeAfunction(2);
+console.log(makeAfunctionResult);
+
+let xyz = 11;
+let zyx = "11";
+console.log(xyz - zyx);
+console.log("" > -11);
