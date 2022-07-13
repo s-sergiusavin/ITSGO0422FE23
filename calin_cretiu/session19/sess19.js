@@ -291,7 +291,10 @@ function setLights(person, style) {
   }
 }
 
-setLights("Bob", "blue");
-console.log(
-  `${myHouse.persons["Bob"].name}'s lights set to ${myHouse.persons["Bob"].lightsColor}`
-);
+let person = "Bob";
+setLights(person, "blue");
+if (person === "Bob") {
+  console.log(
+    `${myHouse.persons["Bob"].name}'s lights set to ${myHouse.persons["Bob"].lightsColor}`
+  );
+}
