@@ -188,6 +188,10 @@ let lightsValue = false;
 let acValue = false;
 let curtainsValue = true;
 let windowsValue = false;
+let garageDoorValue = true;
+let alarmValue = true;
+let remoteValue = true;
+let showerValue = false;
 
 const toggleLights = () => {
     lightsValue = !lightsValue;
@@ -220,9 +224,9 @@ const toggleCurtains = () => {
 const toggleWindows = () => {
     windowsValue = !windowsValue;
     if(windowsValue){
-        return "Draperiile au fost deschise";
+        return "Geamurile au fost deschise";
     } else {
-        return "Draperiile au fost inchise";
+        return "Geamurile au fost inchise";
     }
 }
 
@@ -245,8 +249,41 @@ const playMusic = (song = 'Celine Dion') => {
     console.log(`Playing... ${song}`);
 }
 
+const toggleGarageDoor = () => {
+        garageDoorValue = !garageDoorValue
+        if(garageDoorValue){
+            return "Usa de la garaj este inchisa"
+        } else {
+            return "Usa de la garaj este deschisa"
+        }
+}
 
+const toggleAlarm = () => {
+        alarmValue = !alarmValue
+        if(alarmValue){
+            return "Alarma este oprita"
+        } else {
+            return "Alarma este pornita"
+        }
+}
 
+const toggleTv = () => {
+        remoteValue = !remoteValue
+        if(remoteValue){
+            return "Televizorul este pornit"
+        } else {
+            return "Televizorul este oprit"
+        }
+}
+
+const toggleShower = () => {
+        showerValue = !showerValue
+        if(showerValue){
+            return  "Dusul este pornit"
+        } else {
+            return "Dusul este oprit"
+        }
+}
 
 
 
@@ -254,7 +291,27 @@ const playMusic = (song = 'Celine Dion') => {
 
 toggleLights();
 console.log(toggleLights());
+
 toggleAc();
+console.log(toggleAc());
+
 toggleCurtains();
+console.log(toggleCurtains());
+
 toggleWindows();
+console.log(toggleWindows());
+
 smoke();
+
+
+toggleGarageDoor();
+console.log(toggleGarageDoor());
+
+toggleAlarm();
+console.log(toggleAlarm());
+
+toggleTv();
+console.log(toggleTv());
+
+toggleShower();
+console.log(toggleShower());
