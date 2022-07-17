@@ -195,8 +195,8 @@ const toggleAc = () => {
     return "ac-ul a fost oprit";
   }
 };
-toggleAc();
-console.log(toggleAc());
+// toggleAc();
+// console.log(toggleAc());
 
 const smoke = () => {
   console.log("Smoking...");
@@ -223,4 +223,60 @@ const playMusic = (song = "Metallica") => {
   console.log(`PLaying.. ${song}`);
 };
 
+// HOMEWORKKKK
 
+let smokeSensor = false;
+let alarm = false;
+const smokeAlarm = () => {
+  smokeSensor = !smokeSensor;
+  if (smokeSensor === false) {
+    console.log(`Senzorul de alarma functioneaza si totul este in regula.`);
+  }
+  if (smokeSensor) {
+    console.log(`Senzorul de alarma a detectat fum`);
+    let alarm = true;
+    console.log(`Alarma a pornit si a fost apelat serviciul de urgente.`);
+  }
+};
+smokeAlarm();
+smokeAlarm();
+
+let current = new Date();
+let doorUnlocked = false;
+
+const welcomeHome = () => {
+  doorUnlocked = !doorUnlocked;
+  if (doorUnlocked) {
+    let clocktime = current.getHours();
+    if (clocktime > 17) {
+      console.log("Se aprind luminile");
+    }
+    console.log(`Welcome home boss!`);
+    console.log(toggleAc());
+    playMusic();
+  } else {
+    console.log("Door is locked and nothing will happen.");
+  }
+};
+
+welcomeHome();
+welcomeHome();
+
+let ownerLeftHouse = false;
+const leaveHouse = () => {
+  ownerLeftHouse = !ownerLeftHouse;
+  if (ownerLeftHouse) {
+    window.acValue = true; // am vrut sa redeclar variabila globala in scope ul din functie si am citit ca ar functiona cu window si chiar a mers.
+    window.windowsValue = true;
+    window.lightsValue = true;
+    console.log(toggleAc());
+    console.log(toggleWindows());
+    console.log(toggleLights());
+  } else {
+    console.log(
+      `Owner is inside the house and he is the boss and i can't do nothing.`
+    );
+  }
+};
+leaveHouse();
+leaveHouse();
