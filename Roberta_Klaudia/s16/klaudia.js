@@ -10,7 +10,7 @@
 
 // Primitives(primitive): number, string, boolean, undefined, symbol --->
 
-// References(referinte): objects (arrays, functions) ---> harta catre o comoara; -NU stocheaza informatia
+// References(referinte): objects, arrays, functions, valoarea null ---> harta catre o comoara; -NU stocheaza informatia
 
 /**
  * Variable types
