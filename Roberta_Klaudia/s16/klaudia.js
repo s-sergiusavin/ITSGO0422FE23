@@ -46,6 +46,7 @@ total = aNumber * biNumber;
 total = aNumber / biNumber;
 total = aNumber % biNumber;
 console.log(total);
+// ** = ridicare la putere
 
 
 
