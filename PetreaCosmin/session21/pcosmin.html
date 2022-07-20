@@ -8,6 +8,73 @@
     <link rel="stylesheet" href="pcosmin.css" />
   </head>
   <body>
-    <script src="pcosmin.js"></script>
+    <h1>document object demo || DOM</h1>
+    <div class="flexContainer">
+      <div class="flexItems">
+        <div class="redSquare"></div>
+        <div class="redSquare"></div>
+      </div>
+      <div class="flexItems">
+        <div class="blueSquare"></div>
+        <div class="blueSquare"></div>
+        <div class="blueSquare"></div>
+      </div>
+    </div>
+
+    <div id="changedList">
+      <ul>
+        <li class="changeThis">Unchanged</li>
+        <li class="changeThis">Unchanged</li>
+        <li class="changeThis">Unchanged</li>
+        <li class="changeThis">Unchanged</li>
+        <li class="changeThis">Unchanged</li>
+      </ul>
+    </div>
+
+    <div id="changedList">
+      <h1>DO NOT USE SAME ID FOR Multiple objects</h1>
+    </div>
+
+    <p>This text will be changed later by js</p>
+    <p>salut sunt petrea</p>
+
+    <span class="styledMessages">salut unu doi trei</span>
+    <p class="styledMessages">COSMIN E CEL MAI TREasadewa</p>
+    <!-- on click event -->
+
+    <input type="button" value="Click this" onclick="changeGreenBox()" />
+    <!-- on focus and on blue vent -->
+    <label for="demoInput">Demo input events</label>
+    <input
+      type="text"
+      id="demoInput"
+      onfocus="focusInput()"
+      onblur="blurInput()"
+    />
+    <!-- on mouse enter and mouse leave event -->
+    <div
+      class="greenBox"
+      onmouseenter="mouseEnter()"
+      onmouseleave="mouseLeave()"
+    ></div>
+
+    <!-- ON KEY DOWN & on key up events -->
+    <label for="demoKey">demo Key events</label>
+    <input
+      type="text"
+      id="demoKey"
+      onkeydown="onKeyDown()"
+      onkeyup="onKeyUp()"
+    />
+    <input type="button" value="DBL click" ondblclick="onDblClick()" />
+
+    <!-- Exercises -->
+
+    <p id="textFromReadInput">Text introdus</p>
+    <label for="readValueInput">Read value input</label>
+    <input type="text" name="" id="readValueInput" />
+    <input type="button" value="Read Input" onclick="readInput()" />
   </body>
+
+  <script src="pcosmin.js"></script>
 </html>
