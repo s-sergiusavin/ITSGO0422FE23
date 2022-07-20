@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Sesiunea 21 | DOM</title>
+    <link href="style.css" rel="stylesheet" />
+  </head>
+  <body>
+    <h1>Document object model</h1>
+
+    <div class="flexContainer">
+      <div class="flexItems">
+        <div class="redSquare"></div>
+        <div class="redSquare"></div>
+      </div>
+      <div class="flexItems">
+        <div class="blueSquare"></div>
+        <div class="blueSquare"></div>
+        <div class="blueSquare"></div>
+      </div>
+    </div>
+
+    <div id="changedList">
+      <ul>
+        <li class="changeThis">Unchanged</li>
+        <li class="changeThis">Unchanged</li>
+        <li class="changeThis">Unchanged</li>
+        <li class="changeThis">Unchanged</li>
+        <li class="changeThis">Unchanged</li>
+      </ul>
+    </div>
+
+    <div id="changedList">
+      <p>Do not use same id for multiple elements</p>
+    </div>
+
+    <p>This text will be changed later by JS</p>
+    <p>as;dkfs;dkfjskf</p>
+
+    <span class="styledMessages">This message was styled by JS</span>
+    <p class="styledMessages">This message was styled by JS</p>
+
+    <!-- on click event -->
+    <input type="button" value="click this" onclick="changeGreenBox()" />
+
+    <!-- On focus and on blur events -->
+    <label for="demoInput">Demo Input Events</label>
+    <input
+      type="text"
+      id="demoInput"
+      onfocus="focusInput()"
+      onblur="blurInput()"
+    />
+
+    <!-- mouse enter & mouse leave events -->
+    <div
+      class="greenBox"
+      onmouseenter="mouseEnter()"
+      onmouseleave="mouseLeave()"
+    ></div>
+
+    <!-- on key down & up -->
+    <label for="demoKey">Demo key events</label>
+    <input
+      type="text"
+      name=""
+      id="demoKey"
+      onkeydown="onKeyDown()"
+      onkeyup="onKeyUp()"
+    />
+
+    <input type="button" value="DBL Click" ondblclick="onDblClick()" />
+
+    <!-- exercises -->
+
+    <p id="textFromReadInput">Text introdus</p>
+    <label for="readValueInput">Read value input</label>
+    <input type="text" id="readValueInput" placeholder="Placeholder" />
+    <input type="button" value="Read Input" onclick="readInput()" />
+  </body>
+  <script src="script.js"></script>
+</html>

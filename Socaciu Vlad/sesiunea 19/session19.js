@@ -257,3 +257,59 @@ console.log(toggleCurtains());
 console.log(toggleWindows());
 
 smoke();
+
+// Tema Smart Home 
+
+let coffeValue = true;
+const current = new Date();
+let hour = current.getHours();
+
+console.log(hour);
+
+const pressToMakeCoffe = () => {
+    coffeValue = !coffeValue;
+    if (coffeValue === true && hour > 7 && hour < 10){        
+        return `Coffe is done.`;
+    } else {
+        return `It's too late for coffe.`
+    }
+}
+pressToMakeCoffe(); // off  
+pressToMakeCoffe(); // on
+console.log(pressToMakeCoffe()); // off
+
+let irrigationSystem = false;
+
+const wateringPlants = function(daysOfWeek) {
+        irrigationSystem = true;
+        if (irrigationSystem){
+            if(daysOfWeek === 'Luni' || daysOfWeek === 'Joi'){
+                return `plantele au fost udate`;        
+            } else {
+                return `nu e ziua pt udat plantele`;
+            }
+        }
+    
+}
+
+console.log(wateringPlants('Marti'));
+console.log(wateringPlants('Luni'));
+
+let doorLocked = false;
+let ownerLeft = false;
+let ownerIsHome = true;
+
+const leaveHome = () => {
+    doorLocked = !doorLocked;
+    ownerLeft = !ownerLeft;
+    ownerIsHome= !ownerIsHome;
+    if (ownerLeft === true && doorLocked === true && ownerIsHome === false){
+        return `Proprietarul a plecat si usile au fost inchise`;
+    } else if (ownerLeft === false && doorLocked === false && ownerIsHome === true){
+        return `Proprietarul nu a plecat`
+    }
+}
+
+console.log(leaveHome());
+console.log(leaveHome());
+console.log(leaveHome());
