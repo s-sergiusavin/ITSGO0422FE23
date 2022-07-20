@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Sesiunea 21</title>
+    <link rel="stylesheet" href="ddenisia21.css" />
+  </head>
+  <body>
+    <h1>Document Object model/DOM</h1>
+
+    <div class="flexContainer">
+      <div class="flexItems">
+        <div class="redSquare"></div>
+        <div class="redSquare"></div>
+      </div>
+      <div class="flexItems">
+        <div class="blueSquare"></div>
+        <div class="blueSquare"></div>
+        <div class="blueSquare"></div>
+      </div>
+    </div>
+
+    <div id="changedList">
+      <ul>
+        <li class="changeThis">Unchanged</li>
+        <li class="changeThis">Unchanged</li>
+        <li class="changeThis">Unchanged</li>
+        <li class="changeThis">Unchanged</li>
+        <li class="changeThis">Unchanged</li>
+      </ul>
+    </div>
+    <div id="changedList">
+      <p>Do not use same id for multiple elements</p>
+    </div>
+
+    <p>This text will be changed later by Js</p>
+    <p>dgshgfgljdglsfkwsb</p>
+
+    <span class="styledMessages">This message was styled by JS</span>
+    <p class="styledMessages">This message was styled by JS</p>
+
+    <input type="button" value="Click this" onclick="changeGreenBox()" />
+
+    <!-- On focus & on blur events  -->
+
+    <label for="demoInput">Demo input events</label>
+    <input
+      type="text"
+      id="demoInput"
+      onfocus="focusInput()"
+      onblur="onblurInput()"
+    />
+
+    <div
+      class="greenBox"
+      onmouseenter="mouseEnter()"
+      onmouseleave="mouseLeave()"
+    ></div>
+
+    <!-- On Key down & on key up events -->
+
+    <label for="demoKey">Demo Key events</label>
+    <input
+      type="text"
+      name=""
+      id="demoKey"
+      onkeydown="onKeyDown()"
+      onkeyup="onKeyUp()"
+    />
+
+    <input type="button" value="DBL click" ondblclick="onDblClick()" />
+
+    <!-- Exercises -->
+    <p id="textFromReadInput">Text introdus</p>
+    <label for="readValueInput">Read value input</label>
+    <input type="text" id="readValueInput" />
+    <input type="button" value="Read input" onclick="readInput()" />
+  </body>
+  <script src="ddenisia21.js"></script>
+</html>
