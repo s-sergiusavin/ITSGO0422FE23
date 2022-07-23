@@ -41,6 +41,8 @@
     <span class="styledMessages">This message was styled by JS</span>
     <p class="styledMessages">This message was styled by JS</p>
 
+    <!-- On click event -->
+
     <input type="button" value="Click this" onclick="changeGreenBox()" />
 
     <!-- On focus & on blur events  -->
@@ -53,6 +55,7 @@
       onblur="onblurInput()"
     />
 
+     <!-- Mouse enter & mouse leave events -->
     <div
       class="greenBox"
       onmouseenter="mouseEnter()"
@@ -68,6 +71,7 @@
       id="demoKey"
       onkeydown="onKeyDown()"
       onkeyup="onKeyUp()"
+      placeholder="Placehoder"
     />
 
     <input type="button" value="DBL click" ondblclick="onDblClick()" />
@@ -75,7 +79,7 @@
     <!-- Exercises -->
     <p id="textFromReadInput">Text introdus</p>
     <label for="readValueInput">Read value input</label>
-    <input type="text" id="readValueInput" />
+    <input type="text" id="readValueInput"  placeholder="Placeholder"/>
     <input type="button" value="Read input" onclick="readInput()" />
   </body>
   <script src="ddenisia21.js"></script>

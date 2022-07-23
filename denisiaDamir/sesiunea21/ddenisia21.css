@@ -2,29 +2,25 @@ body {
   height: 2000px;
 }
 
-.redSquare {
+.redSquare,
+.blueSquare,
+.greenBox {
   width: 150px;
   height: 150px;
-  background-color: red;
   margin: 10px;
+}
+.redSquare {
+  background-color: red;
 }
 .blueSquare {
-  width: 150px;
-  height: 150px;
   background-color: blue;
-  margin: 10px;
 }
 
-.flexContainer {
-  display: flex;
-}
+.flexContainer,
 .flexItems {
   display: flex;
 }
 
 .greenBox {
-  width: 150px;
-  height: 150px;
   background-color: green;
-  margin: 10px;
 }
