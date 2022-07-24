@@ -129,4 +129,3 @@ const readInput = () => {
 
 document.getElementById("readValueInput").value = 'Sergiu';
 
-

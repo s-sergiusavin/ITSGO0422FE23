@@ -29,7 +29,9 @@ redSquare.style.backgroundColor = 'green';
 // css padding-left => js paddingLeft
 
 
-const blueSquares = document.querySelectorAll('.blueSquare'); 
+const blueSquares = document.querySelectorAll('.blueSquare'); // Returneaza toate elementele care indeplinesc conditia
+// const blueSquares = document.querySelectorAll("#blueSquare"); // cauta dupa id
+// const blueSquares = document.querySelectorAll("blueSquare"); // cauta dupa tagName
 console.log(blueSquares);
 
 blueSquares[0].style.backgroundColor = 'yellow';
@@ -127,3 +129,33 @@ const readInput = ()=>{
 }
 
 document.getElementById('readValueInput').value = "denisia";
+
+
+const copyText = () =>{
+    document.getElementById('copyValueInput').innerHTML = "copied text";
+}
+
+
+ const focusOut = ()=>{
+   const copiedText = document.getElementById('copyText');
+   copiedText.style.color = "red";
+ }
+
+ const mouseDown =()=>{
+    document.getElementById("clickText").style.textTransform ="uppercase";
+    document.getElementById("clickText").style.color="";
+    
+ }
+ const mouseUp =()=>{
+    document.getElementById("clickText").style.textTransform = "";
+    document.getElementById("clickText").style.color="green";
+    
+
+ }
+
+ const mouseOver = ()=>{
+    document.getElementById("copyText").style.fontSize = '20px';
+    document.getElementById("copyText").style.fontStyle = 'italic';
+
+
+ }

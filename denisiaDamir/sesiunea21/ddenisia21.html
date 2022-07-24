@@ -52,10 +52,10 @@
       type="text"
       id="demoInput"
       onfocus="focusInput()"
-      onblur="onblurInput()"
+      onblur="blurInput()"
     />
 
-     <!-- Mouse enter & mouse leave events -->
+    <!-- Mouse enter & mouse leave events -->
     <div
       class="greenBox"
       onmouseenter="mouseEnter()"
@@ -79,8 +79,23 @@
     <!-- Exercises -->
     <p id="textFromReadInput">Text introdus</p>
     <label for="readValueInput">Read value input</label>
-    <input type="text" id="readValueInput"  placeholder="Placeholder"/>
+    <input type="text" id="readValueInput" placeholder="Placeholder" />
     <input type="button" value="Read input" onclick="readInput()" />
+
+    <p id="copyValueInput"></p>
+    <label>Copy value input </label>
+    <input
+      type="text"
+      value="copy this"
+      id="copyText"
+      oncopy="copyText()"
+      onfocusout="focusOut()"
+      onmouseover="mouseOver()"
+    />
+
+    <p id="clickText" onmousedown="mouseDown()" onmouseup="mouseUp()">
+      Click this text
+    </p>
   </body>
   <script src="ddenisia21.js"></script>
 </html>
