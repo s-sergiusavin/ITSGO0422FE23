@@ -1,0 +1,87 @@
+/* First attempt */
+
+/* body {
+    background: radial-gradient(#2d2d2d,#000);
+}
+
+#myClock {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    color: whitesmoke;
+    font-size: large;
+    font-family: 'Orbitron', sans-serif;
+    letter-spacing: 7px;
+    transform: translateX(-50%) translateY(-50%);
+} */
+
+
+
+/* Second attempt */
+@property --h {
+  /* defined as type number for the transition to work */
+  syntax: "<number>";
+  initial-value: 0;
+  inherits: false;
+}
+
+:root {
+  --s: 100%;
+  --l: 60%;
+  --a: 1;
+  --accent: hsl(var(--h), var(--s), var(--l), var(--a));
+}
+
+body {
+  margin: 0;
+  background: radial-gradient(#2d2d2d, #000);
+  min-height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.clock {
+  font-size: 2.5em;
+  font-family: "Orbitron", sans-serif;
+  text-shadow: 0px 0px 10px var(--accent);
+  margin: 1em;
+  background: #1c1c1c;
+  color: var(--accent);
+  width: 9em;
+  height: 9em;
+  position: relative;
+  border-radius: 50%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  box-shadow: inset 0px 5px 10px #040404;
+  animation: shine 20s infinite;
+}
+
+.clock::after,
+.clock::before {
+  content: "";
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  z-index: -1;
+  border-radius: inherit;
+} 
+
+.clock::before {
+  --a: 0.5;
+  background: linear-gradient(0deg, #303034 0%, #424141 100%);
+  width: 100%;
+  height: 100%;
+  box-shadow: inset 0 1px 1px #696969, 0 0 15px var(--accent);
+}
+
+html {
+    animation: hRotate 30s infinite;
+}
+
+@keyframes hRotate {
+    100%{--h: 360;}
+}

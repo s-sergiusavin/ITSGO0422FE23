@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Session 21 - JS</title>
+    <link rel="stylesheet" href="klaudia.css" />
+  </head>
+  <body>
+    <h1>Document Object Model | DOM</h1>
+
+    <div class="flex_container">
+      <div class="flex_items">
+        <div class="redSquare"></div>
+        <div class="redSquare"></div>
+      </div>
+
+      <div class="flex_items">
+        <div class="blueSquare"></div>
+        <div class="blueSquare"></div>
+        <div class="blueSquare"></div>
+      </div>
+    </div>
+
+    <div id="changedList">
+      <ul>
+        <li class="changeThis">Unchanged</li>
+        <li class="changeThis">Unchanged</li>
+        <li class="changeThis">Unchanged</li>
+        <li class="changeThis">Unchanged</li>
+        <li class="changeThis">Unchanged</li>
+      </ul>
+    </div>
+
+    <div id="changedList">
+      <p>Do NOT use the SAME ID for multiple elements!</p>
+    </div>
+
+    <p>This text will be changed later by JS.</p>
+    <p>lqwheyfgcwq fc</p>
+
+    <span class="styledMessages">This message was styled by JS.</span>
+    <p class="styledMessages">This message was styled by JS.</p>
+
+    <!-- on CLICK event -->
+    <input type="button" value="Click this" onclick="changeGreenBox()">
+
+    <!-- on FOCUS + on BLUR events -->
+    <label for="demoInput">Demo Input Events</label>
+    <input type="text" id="demoInput" onfocus="focusInput()" onblur="blurInput()">
+
+    <!--on MOUSE ENTER + on MOUSE LEAVE events -->
+    <div class="greenBox" onmouseenter="mouseEnter()" onmouseleave="mouseLeave()"></div>
+
+    <!-- on KEY DOWN + on KEY UP events -->
+    <label for="demoKey">Demo Key Events</label>
+    <input type="text" name="" id="demoKey" onkeydown="onKeyDown()" onkeyup="onKeyUp()" placeholder="placeholder">
+
+    <input type="button" value="DBL Click" ondblclick="onDblClick()">
+
+    <!-- exercices -->
+    <p id="textFromReadInput">Text introdus</p>
+
+    <label for="readValueInput">Read Value Input</label>
+    <input type="text" id="readValueInput" placeholder="placeholder">
+    <input type="button" value="Read input" onclick="readInput()">
+
+  </body>
+  <script src="klaudia.js"></script>
+</html>
