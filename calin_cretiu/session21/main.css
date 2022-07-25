@@ -1,0 +1,27 @@
+* {
+  box-sizing: border-box;
+}
+
+body {
+  height: 2000px;
+}
+.square {
+  width: 150px;
+  height: 150px;
+  margin: 10px;
+}
+.bgRed {
+  background-color: red;
+}
+
+.bgBlue {
+  background-color: blue;
+}
+
+.flex {
+  display: flex;
+}
+
+.greenBg {
+  background-color: greenyellow;
+}

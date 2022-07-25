@@ -1,0 +1,96 @@
+<!DOCTYPE html>
+
+<!-- TEMA :: REFACTORIZARE CSS si adaugare 3 evenimente noi + mesaj pe 
+    discord/homework cand este gata
+ -->
+
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <link rel="icon" type="image/x-icon" href="./favicon.ico" />
+    <link rel="stylesheet" href="main.css" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Session 21</title>
+  </head>
+  <body>
+    <h1>Document Object Model | DOM</h1>
+    <h2>Tema: optimizat CSS-ul</h2>
+
+    <div class="flex">
+      <div class="flex">
+        <div class="square bgRed"></div>
+        <div class="redSquare"></div>
+      </div>
+      <div class="flex">
+        <div class="square bgBlue"></div>
+        <div class="square bgBlue"></div>
+        <div class="square bgBlue"></div>
+      </div>
+    </div>
+    <div id="changeList">
+      <ul>
+        <li class="changeThis">Unchanged</li>
+        <li class="changeThis">Unchanged</li>
+        <li class="changeThis">Unchanged</li>
+        <li class="changeThis">Unchanged</li>
+        <li class="changeThis">Unchanged</li>
+      </ul>
+    </div>
+    <div id="changeList">
+      <p>Don't do this. Do not use an ID multiple times</p>
+    </div>
+    <p>This will change in JS</p>
+    <p>random text</p>
+    <span class="styledMessages"> This message was styled in JS </span>
+    <p class="styledMessages">This message was styled in JS</p>
+
+    <!-- ON click event-->
+    <input type="button" value="Click This!" onclick="changeGreenBox()" />
+
+    <label for="demoInput">Demo input events</label>
+    <input
+      type="text"
+      id="demoInput"
+      onfocus="focusInput()"
+      onblur="blurInput()"
+    />
+    <!-- Mouse enter & mouse leave events -->
+    <div
+      class="square bgGreen"
+      onmouseenter="mouseEnter()"
+      onmouseleave="mouseLeave()"
+    ></div>
+
+    <label for="demoKey">Demo key eventts</label>
+    <input
+      type="text"
+      name=""
+      id="demoKey"
+      onkeyup="onKeyUp()"
+      onkeydown="onKeyDown()"
+    />
+    <input
+      type="button"
+      value="DBL Click"
+      ondblclick="doubleClick()"
+      onvolumechange="doubleClick()"
+    />
+
+    <!-- Exercises -->
+
+    <p id="textFromReadInput">Text introdus</p>
+    <label for="readValueInput">Read value input</label>
+    <input type="text" id="readValueInput" />
+    <input
+      type="button"
+      id="submitButton"
+      value="change the text"
+      onclick="readInput()"
+      onmouseenter="changeBorder()"
+      onmouseout="resetBorder()"
+      onmouseup="popup()"
+    />
+    <script src="sess21.js" />
+  </body>
+</html>
