@@ -9,6 +9,13 @@
     margin: 10px;
 }
 
+.customBox {
+    width: 150px;
+    height: 150px;
+    background-color: red;
+    margin: 10px;
+}
+
 .blueSquare {
     width: 150px;
     height: 150px;

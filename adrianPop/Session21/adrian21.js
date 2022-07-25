@@ -101,7 +101,8 @@ const onKeyDown = () => {
 };
 
 const onKeyUp = () => {
-    greenBox.style.backgroundColor = 'teal';
+    greenBox.style.backgroundColor = 'yellow';
+    // greenBox.innerText = 'teal';
 };
 
 const ondblClick = () => {
@@ -111,7 +112,25 @@ const ondblClick = () => {
 };
 
 const readInput = () => {
-    const readValueInput = document.getElementById('readValueInput');
-    document.getElementById('textFromReadInput').innerHTML = readValueInput.value;
+    const readValueInput = document.getElementById('readValueInput');   
+    customBox.style.backgroundColor = readValueInput;
 }
 
+// TEMA
+// EX1 
+const onKeyUpTema1 = () => {
+    let text = document.getElementById('firstName').value;
+    document.getElementById('firstNameOutput').innerHTML = text;
+}
+// Ex2
+
+const readInput2 = () => {
+    let text = document.getElementById('boxColor').value;
+
+    document.getElementById('boxColorText').innerHTML = text;
+    
+    document.querySelector('.customBox').style.backgroundColor = text;
+    
+    // document.getElementsByClassName('customBox').backgroundColor = text;
+    
+}
