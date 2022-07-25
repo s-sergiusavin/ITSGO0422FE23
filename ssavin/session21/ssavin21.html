@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Session 21 | DOM</title>
+    <link rel="stylesheet" href="ssavin21.css">
+</head>
+<body>
+    <h1>Document Object Model | DOM</h1>
+
+    <div class="flexContainer">
+        <div class="flexItems">
+            <div class="redSquare"></div>
+            <div class="redSquare"></div>
+        </div>
+        <div class="flexItems">
+            <div class="blueSquare"></div>
+            <div class="blueSquare"></div>
+            <div class="blueSquare"></div>
+        </div>
+    </div>
+
+    <div id="changedList">
+        <ul>
+            <li class="changeThis">Unchanged</li>
+            <li class="changeThis">Unchanged</li>
+            <li class="changeThis">Unchanged</li>
+            <li class="changeThis">Unchanged</li>
+            <li class="changeThis">Unchanged</li>
+        </ul>
+    </div>
+
+    <div id="changedList">
+        <p>Do not use same id for multiple elements</p>
+    </div>
+
+    <p>This text will be changed later by JS</p>
+    <p>kdshfajafsd</p>
+
+    <span class="styledMessages">This message was style by JS</span>
+    <p class="styledMessages">This message was style by JS</p>
+
+    <!-- ON CLICK Event -->
+    <input type="button" value="Click this" onclick="changeGreenBox()">
+
+    <!-- ON FOCUS & ON BLUR EVENTS -->
+    <label for="demoInput">Demo input events</label>
+    <input type="text" id="demoInput" onfocus="focusInput()" onblur="blurInput()">
+
+    <!-- MOUSE ENTER & MOUSE LEAVE Events -->
+    <div class="greenBox" onmouseenter="mouseEnter()" onmouseleave="mouseLeave()"></div>
+
+    <!-- ON KEY DOWN & ON KEY UP Events -->
+    <label for="demoKey">Demo Key Events</label>
+    <input type="text" name="" id="demoKey" onkeydown="onKeyDown()" onkeyup="onKeyUp()" placeholder="Placeholder">
+
+    <input type="button" value="DBL Click" ondblclick="onDblClick()">
+
+    <!-- Exercises -->
+
+    <p id="textFromReadInput">Text introdus</p>
+    <label for="readValueInput">Read value input</label>
+    <input type="text" id="readValueInput" placeholder="Placeholder">
+    <input type="button" value="Read Input" onclick="readInput()" >
+    
+</body>
+<script src="ssavin21.js"></script>
+</html>
