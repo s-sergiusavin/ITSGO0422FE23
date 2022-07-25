@@ -12,13 +12,13 @@
 
     <div class="flexContainer">
       <div class="flexItems">
-        <div class="redSquare"></div>
-        <div class="redSquare"></div>
+        <div class="redSquare box"></div>
+        <div class="redSquare box"></div>
       </div>
       <div class="flexItems">
-        <div class="blueSquare"></div>
-        <div class="blueSquare"></div>
-        <div class="blueSquare"></div>
+        <div class="blueSquare box"></div>
+        <div class="blueSquare box"></div>
+        <div class="blueSquare box"></div>
       </div>
     </div>
 
@@ -79,6 +79,33 @@
     <label for="readValueInput">Read value input</label>
     <input type="text" id="readValueInput" placeholder="Placeholder" />
     <input type="button" value="Read Input" onclick="readInput()" />
+    <br />
+    <!-- Tema -->
+    <button class="show-modal" onclick="openModal()">Show modal</button>
+
+    <div class="modal hidden">
+      <button class="close-modal" onclick="closeModal()">&times;</button>
+      <h1>I'm a modal window</h1>
+      <p>
+        Lorem ipsum, dolor sit amet consectetur adipisicing elit. Tenetur esse
+        ea quo! Est corporis recusandae ducimus ipsa enim quos. Deserunt fuga
+        officiis dolorem vel repellendus nesciunt iste dignissimos eum cum dolor
+        omnis doloremque aliquid distinctio rem similique culpa assumenda dicta
+        ipsum consequatur, asperiores quia quasi ullam. Quidem voluptatibus
+        libero et ut culpa voluptates non beatae mollitia? Voluptatem illo
+        numquam ducimus facilis aspernatur vero eius quis eaque voluptas at
+        adipisci accusamus dicta ab optio quisquam, nesciunt maiores voluptate
+        consequatur, veniam hic rerum fuga deserunt recusandae libero. Soluta id
+        libero vitae pariatur aut quaerat enim animi dolorem obcaecati ratione.
+        Nostrum hic eligendi, nihil, nesciunt doloremque adipisci incidunt
+        maxime expedita veritatis itaque animi, reprehenderit eveniet culpa id
+        mollitia natus! Aut ab, aperiam ea quas odio blanditiis nostrum porro
+        perspiciatis eaque asperiores cum dolore at molestias, voluptate aliquid
+        provident non! Quia a nemo maxime quo, voluptatum minus sequi illo
+        voluptatibus odio, reprehenderit nam cum?
+      </p>
+    </div>
+    <div class="overlay hidden" onclick="closeModal()"></div>
   </body>
   <script src="script.js"></script>
 </html>
