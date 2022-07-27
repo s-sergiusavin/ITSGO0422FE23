@@ -86,8 +86,10 @@ clickMeElement.addEventListener('click', function () {
     if (demoInputElement.value) {
         newListElement.innerHTML = demoInputElement.value;
         demoInputElement.value = '';
+        newListElement.addEventListener('click', toggleListItems); // TEMA = ADD EVENT LISTENER
     } else {
         newListElement.innerHTML = 'Elem ' + listItemsElements.length;
+        newListElement.addEventListener('click', toggleListItems); // TEMA = ADD EVENT LISTENER
     }
 })
 
@@ -97,21 +99,27 @@ const addButtonElement = document.getElementsByClassName('addButton')[0];
 const toDoListElement = document.getElementsByClassName('toDoListItems')[0];
 
 addButtonElement.addEventListener('click', function () {
-    if (toDoInputElement.value) {
-        const newListItem = document.createElement('li');
-        newListItem.className = 'newListItems';
-        newListItem.addEventListener('dblclick', function () {
-            this.remove();
-        })
+    if (checkPlan()) {
+        if (toDoInputElement.value) {
+            const newListItem = document.createElement('li');
+            newListItem.className = 'newListItems';
+            newListItem.addEventListener('dblclick', function () {
+                this.remove();
+            })
 
-        toDoListElement.appendChild(newListItem);
-        newListItem.innerHTML = toDoInputElement.value;
-        toDoInputElement.value = '';
+            toDoListElement.appendChild(newListItem);
+            newListItem.innerHTML = toDoInputElement.value;
+            toDoInputElement.value = '';
+
+        }
+    } else {
+        console.log('fffalse');
     }
+
 });
 
 function checkPlan() {
     const newListItemsNumber = document.getElementsByClassName('newListItems');
 
-    return newListItemsNumber < 3;
+    return newListItemsNumber.length < 3;
 }
