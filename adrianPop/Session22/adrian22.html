@@ -5,11 +5,12 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Session 22 | DOM </title>
+    <title>Session 22-23 | DOM </title>
     <link rel="stylesheet" href="adrian22.css">
 </head>
 
 <body>
+    <!-- <script>alert('Ceva')</script> // Alertul opreste executia -->
     <h1> DOM EVENTS & Form Validation</h1>
 
     <div id="testBox">Acesta este un div demo</div>
@@ -31,12 +32,19 @@
         <div>
             <label for="toDoInput">Add Item</label>
             <input type="text" id="toDoInput">
-        </div>        
+        </div>
         <button class="addButton">ADD</button>
     </div>
 
     <div class="toDoListItems"></div>
-    
+
+    <form action="">
+        <span id="error" style="display: none;"></span>
+        <input type="email" id="email" placeholder="Email address" required>
+        <input type="password" id="password" placeholder="Password" required>
+        <input type="submit" id="login" required placeholder="Log in">
+    </form>
+
 
 </body>
 <script src="adrian22.js"></script>

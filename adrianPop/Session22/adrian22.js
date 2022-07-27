@@ -99,7 +99,8 @@ const addButtonElement = document.getElementsByClassName('addButton')[0];
 const toDoListElement = document.getElementsByClassName('toDoListItems')[0];
 
 addButtonElement.addEventListener('click', function () {
-    if (checkPlan()) {
+    const canAdd = checkPlan();
+    if (canAdd) {
         if (toDoInputElement.value) {
             const newListItem = document.createElement('li');
             newListItem.className = 'newListItems';
@@ -111,15 +112,24 @@ addButtonElement.addEventListener('click', function () {
             newListItem.innerHTML = toDoInputElement.value;
             toDoInputElement.value = '';
 
+        } else {
+            alert("Introdu valoare");
+            console.log('Actiune dupa alerta');
         }
     } else {
-        console.log('fffalse');
+        // alert('Te rugam sa treci la un plan tarifar premium/superior');
+        //prompt("please ente name","Harrypotter");
+        //confirm('press button');
     }
 
 });
 
 function checkPlan() {
-    const newListItemsNumber = document.getElementsByClassName('newListItems');
 
-    return newListItemsNumber.length < 3;
+    const newListItemsNumber = document.getElementsByClassName('newListItems').length;
+    return newListItemsNumber < 3;
 }
+
+/**
+ * Regexp
+ */
