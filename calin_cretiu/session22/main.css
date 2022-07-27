@@ -1,0 +1,13 @@
+.squareText {
+  color: white;
+  padding: 20px;
+  font-size: 24px;
+  font-weight: 700;
+}
+.red {
+  background-color: rebeccapurple;
+}
+
+.blue {
+  background-color: blue;
+}
