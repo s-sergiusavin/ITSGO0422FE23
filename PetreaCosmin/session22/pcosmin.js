@@ -44,16 +44,17 @@ for (let i = 0; i < listItemsElements.length; i++) {
   //   });
   listElement.addEventListener("click", toggleListItems);
 }
+
 function toggleListItems() {
   const toggleValue = this.classList.toggle("red");
   console.log(toggleValue);
   if (toggleValue) {
     const span = document.createElement("span");
-    span.innerHTML = "x";
+    span.innerHTML = " x";
     this.appendChild(span);
   } else {
     this.getElementsByTagName("span")[0].remove();
-    // this.remove();
+    this.remove();
   }
 }
 
@@ -79,6 +80,10 @@ clickMeElement.addEventListener("click", function () {
   } else {
     newListElement.innerHTML = "Elem " + listItemsElements.length;
   }
+  for (let i = 0; i < listItemsElements.length; i++) {
+    const listElement = listItemsElements[i];
+    listElement.addEventListener("click", toggleListItems);
+  }
 });
 
 const toDoInputElement = document.getElementById("toDoInput");
@@ -86,19 +91,21 @@ const addButtonElement = document.getElementsByClassName("addButton")[0];
 const toDoListElement = document.getElementsByClassName("toDoListItems")[0];
 
 addButtonElement.addEventListener("click", function () {
-  if (toDoInputElement.value) {
-    const newListItem = document.createElement("li");
-    newListItem.className = "newListItems";
-    newListItem.addEventListener("dblclick", function () {
-      this.remove();
-    });
-    toDoListElement.appendChild(newListItem);
-    newListItem.innerHTML = toDoInputElement.value;
-    toDoInputElement.value = "";
+  if (checkPlan()) {
+    if (toDoInputElement.value) {
+      const newListItem = document.createElement("li");
+      newListItem.className = "newListItems";
+      newListItem.addEventListener("dblclick", function () {
+        this.remove();
+      });
+      toDoListElement.appendChild(newListItem);
+      newListItem.innerHTML = toDoInputElement.value;
+      toDoInputElement.value = "";
+    }
   }
 });
 
 function checkPlan() {
   const newListItemsNumber = document.getElementsByClassName("newListItems");
-  return newListItemsNumber < 3;
+  return newListItemsNumber.length < 3;
 }
