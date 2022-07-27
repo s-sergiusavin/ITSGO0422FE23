@@ -1,0 +1,140 @@
+*, *:before, *:after {
+    box-sizing: border-box;
+}
+
+html,
+body,
+div,
+span,
+applet,
+object,
+iframe,
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+p,
+blockquote,
+pre,
+a,
+abbr,
+acronym,
+address,
+big,
+cite,
+code,
+del,
+dfn,
+em,
+img,
+ins,
+kbd,
+q,
+s,
+samp,
+small,
+strike,
+strong,
+sub,
+sup,
+tt,
+var,
+b,
+u,
+i,
+center,
+dl,
+dt,
+dd,
+ol,
+ul,
+li,
+fieldset,
+form,
+label,
+legend,
+table,
+caption,
+tbody,
+tfoot,
+thead,
+tr,
+th,
+td,
+article,
+aside,
+canvas,
+details,
+embed,
+figure,
+figcaption,
+footer,
+header,
+hgroup,
+menu,
+nav,
+output,
+ruby,
+section,
+summary,
+time,
+mark,
+audio,
+video {
+  margin: 0;
+  padding: 0;
+  border: 0;
+  font-size: 100%;
+  font: inherit;
+  vertical-align: baseline;
+}
+
+body {
+  min-width: 320px;
+  min-height: var(--viewport-height);
+  line-height: 1;
+  word-wrap: break-word;
+  overflow-x: hidden;
+}
+
+body:before, body:after {
+    content: '';
+    display: block;
+    position: fixed;
+    top: 0;
+    left: 0;
+    transform: scale(1);
+}
+
+body:before {
+    width: 100vw;
+    height: var(--background-height);
+    z-index: 0;
+    pointer-events: none;
+    background-attachment: scroll;
+    background-image: url();
+    background-size: 512px, cover;
+    background-position: center, top;
+    background-repeat: repeat, repeat;
+    background-color: #FFFFFF;
+}
+
+body:after {
+    width: 100%;
+    height: 100%;
+    background-color: #080808;
+    z-index: 1;
+    opacity: 0;
+    visibility: hidden;
+    transition: opacity 1.5s ease-in-out 0s, visibility 1.5s 0s;
+}
+
+h1 {
+    font-family: 'Cinzel', serif;
+}
+
+p {
+    font-family: 'Zilla Slab', serif;
+}
