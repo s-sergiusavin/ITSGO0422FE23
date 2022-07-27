@@ -101,11 +101,148 @@ addButtonElement.addEventListener("click", function () {
       toDoListElement.appendChild(newListItem);
       newListItem.innerHTML = toDoInputElement.value;
       toDoInputElement.value = "";
+    } else {
+      alert("Te rugam sa introduci o valoare");
     }
+  } else {
+    alert("S-a atins numarul maxim de task uri");
   }
 });
 
 function checkPlan() {
   const newListItemsNumber = document.getElementsByClassName("newListItems");
+  console.log(newListItemsNumber);
   return newListItemsNumber.length < 3;
 }
+
+/** RegExp- Regular expressions
+ * tipare care cauta anumite combinatii in string uri
+ */
+
+let string = "zzzabcdef";
+let pattern = /ab/;
+
+console.log(pattern.exec(string));
+console.log(pattern.test(string));
+console.log(string.match(pattern));
+
+const submitBtn = document.getElementById("login");
+const emailField = document.querySelector("#email");
+const passwordField = document.querySelector("#password");
+const error = document.querySelector("#error");
+
+const validatePassword = (value) => {
+  // if (value === "password") return true;
+  // else return false;
+  return value === "password";
+};
+const validateEmail = (value, regex) => {
+  return !!value.match(regex); //Forteaza o valoare sa fie booleana
+};
+
+submitBtn.addEventListener("click", function (event) {
+  event.preventDefault();
+
+  const emailValue = emailField.value;
+  const passwordValue = passwordField.value;
+  const regexEmailPattern = /\D{4,}\@\D{4,}\.\D{2,}/g;
+
+  if (emailValue === "" || passwordValue === "") {
+    error.style.display = "block";
+    error.innerHTML = "All fields are required and must have a value";
+    error.style.color = "red";
+  } else {
+    //Validate email
+    //validate password
+    if (
+      validatePassword(passwordValue) &&
+      validateEmail(emailValue, regexEmailPattern)
+    ) {
+      error.style.display = "none";
+      alert("Logged in ");
+      emailField.value = "";
+      passwordField.value = "";
+    } else {
+      alert("try again");
+      error.innerHTML = "Incorect email or password";
+      emailField.value = "";
+      passwordField.value = "";
+    }
+  }
+});
+const firstNameField = document.getElementById("firstName");
+const lastNameField = document.getElementById("lastName");
+const ageField = document.getElementById("age");
+
+const firstName = "Angelina";
+const lastName = "Jolie";
+const age = 27;
+// firstNameField.value = firstName;
+// lastNameField.value = lastName;
+// ageField.value = age;
+
+/**Built in functions
+ */
+//setTimeout executa o functie pe care o primeste ca si prim parametru, o singura data ,dupa o anumita perioada de timp
+
+// setTimeout(() => {
+//   firstNameField.value = firstName;
+//   lastNameField.value = lastName;
+//   ageField.value = age;
+// }, 7000);
+
+function setFields() {
+  firstNameField.value = firstName;
+  lastNameField.value = lastName;
+  document.getElementById("age").value = age;
+}
+
+// setTimeout(setFields, 4000);
+
+// function myFunction() {
+//   return "Rolul parantezelor";
+// }
+
+// const myFunction2 = () => {
+//   return "Rolul parantezelor";
+// };
+
+// const newFunction = myFunction();
+// const anotherFunction = myFunction;
+
+// console.log(myFunction());
+// console.log(anotherFunction);
+// console.log(anotherFunction());
+
+/**Set Interval
+ * setInterval();
+ * apeleaza o functie de mai multe ori cu frecventa intervalului mentionat
+ */
+
+let start = 1;
+const interval = setInterval(() => {
+  console.log(start);
+  start += 1;
+  if (start == 7) {
+    setFields();
+    clearInterval(interval);
+  }
+}, 2000);
+
+const person = {
+  name: "Cosmin",
+  age: 23,
+};
+const employee = person;
+console.log(person);
+console.log(employee);
+
+employee.name = "Andrei";
+console.log(person);
+console.log(employee);
+
+let whaterver = person.name;
+whaterver = "rares";
+
+console.log(whaterver);
+console.log(person);

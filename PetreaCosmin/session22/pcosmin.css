@@ -9,12 +9,13 @@ body {
   display: flex;
   flex-direction: column;
   align-items: center;
+  row-gap: 20px;
 }
 .formStyle {
   display: flex;
   flex-direction: column;
   align-items: center;
-  border-radius:20px;
+  border-radius: 20px;
   width: 550px;
   row-gap: 1rem;
   background: #dae2f8; /* fallback for old browsers */
@@ -73,4 +74,10 @@ input[type="text"] {
   font-weight: 500;
   border: none;
   cursor: pointer;
+}
+
+.loginForm {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
 }
