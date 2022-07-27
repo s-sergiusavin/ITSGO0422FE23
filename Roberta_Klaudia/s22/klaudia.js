@@ -102,17 +102,28 @@ const addButtonElem = document.getElementsByClassName('addButton')[0];
 const toDoListElem = document.getElementsByClassName('toDoListItems')[0];
 
 addButtonElem.addEventListener('click', function () {
-    if (toDoInputElem.value) {
-        const newListItem = document.createElement('li');
-        newListItem.className = 'newListItems';
-        newListItem.addEventListener('dbclick', function () {
-            this.remove();
+    const canAdd = checkPlan();
+    if (canAdd) {
+        if (toDoInputElem.value) {
+            const newListItem = document.createElement('li');
+            newListItem.className = 'newListItems';
+            newListItem.addEventListener('dbclick', function () {
+                this.remove();
         });
 
         toDoListElem.appendChild(newListItem);
         newListItem.innerHTML = toDoInputElem.value;
         toDoInputElem.value = '';
+    } else {
+            alert('Te rugam sa introduci o valoare');
+            console.log('actiune dupa alerta');
+        }
+    } else {
+        alert('Te rugam sa treci la un plan premium');
+        // promt('please enter your name', 'Harry Potter');
+        // confirm('press the button');
     }
+    
 });
 
 function checkPlan() {
